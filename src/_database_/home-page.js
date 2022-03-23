@@ -9,12 +9,11 @@ export const blogs = {
 }
 
 export const tags = {
-  "bitwise": {
+  ["bitwise"]: {
     name: "bitwise",
     postIDs: ["20220323-01"],
     tagStyles: {
-      background: "#e9a800",
-      opacity: 0.2
+      background: 'rgba(233, 168, 0, 0.2)'
     }
   }
 }
