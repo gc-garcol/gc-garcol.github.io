@@ -12,7 +12,7 @@ min-height: 100vh;
 
 export const BaseContent = styled.div`
 max-width: 888px;
-padding: 24px 16px 0 16px;
+padding: 40px 16px 40px 16px;
 margin-left: auto;
 margin-right: auto;
 `;
