@@ -14,7 +14,8 @@ export const BlogPage202203201 = () => {
       <BaseContent className="base-content">
         <Title>{ blog.title }</Title>
         <TagsContainer>
-          <span>Tags: </span>
+          <span className="text-bold">Tags: </span>
+          <BlogTag to="/">#all</BlogTag>
           {
             blog.tags.map(tag => {
               return (

@@ -60,6 +60,10 @@ p, li {
   text-decoration: line-through !important;
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 888px) {
   .img.width-50 {
     width: auto;
