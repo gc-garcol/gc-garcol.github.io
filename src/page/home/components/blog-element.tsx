@@ -2,6 +2,7 @@ import { BlogElementProps } from "./blog-element.type";
 import styled from "styled-components";
 import {useNavigate} from 'react-router-dom';
 import { useCallback } from "react";
+import { onClickTag } from "utils/tag-util";
 
 export default (props: any) => {
   const navigate = useNavigate();
@@ -12,8 +13,9 @@ export default (props: any) => {
       <TagContainer>
         {
           props.tags.map((tag: any) => {
+            const handleNavigateTag = useCallback(() => navigate(`/home?tag=${tag.name}`, {replace: true}), [navigate]);
             return (
-              <Tag key={ tag.name } style={ tag.tagStyles } >{ tag.name }</Tag>
+              <Tag onClick={() => onClickTag(tag.name, handleNavigateTag) } key={ tag.name } style={ tag.tagStyles } >{ tag.name }</Tag>
             );
           })
         }
@@ -47,4 +49,5 @@ padding: 4px;
 &:hover {
   cursor: pointer;
 }
+margin-left: 4px;
 `;

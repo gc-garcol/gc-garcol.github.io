@@ -2,28 +2,43 @@ import { blogs, tags } from "_database_/home-page"
 import styled from "styled-components";
 import BlogElement from "./components/blog-element";
 import { deepClone } from "utils/Util";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useCallback } from "react";
 
 const HomePage = () => {
+  const [searchParams] = useSearchParams();
+  let blogsUIs: any;
+  let tagClone = deepClone(tags);
+  let blogClone = deepClone(blogs);
 
-  let blogsUIs = Object.values(blogs);
-  let tagUI = deepClone(tags);
-  blogsUIs = blogsUIs.map(blog => {
+  const tag: any = searchParams.get('tag');
+  if (tag) {
+    if (!tagClone[tag]) {
+      window.location.href = '/404';
+      return (<div></div>);
+    }
+    const postIDs = tagClone[tag].postIDs;
+    blogsUIs = Object.values(deepClone(postIDs.map((id: string) => blogClone[id])));
+  } else {
+    blogsUIs = Object.values(blogs);
+  }
+
+  blogsUIs = blogsUIs.map((blog: any) => {
     const blogItem = deepClone(blog);
     blogItem.tags = blogItem.tags.map((tag: string): any => {
-      const {name, tagStyles} = tagUI[tag];
+      const {name, tagStyles} = tagClone[tag];
       return {name, tagStyles};
     })
     return blogItem;
   });
 
-  console.log(blogsUIs)
   return (
     <Container>
       <HomePageContainer>
         <h1>Content</h1>
         <BlogsContainer>
           {
-            blogsUIs.map(blog => <BlogElement key={ blog.id } { ...blog } ></BlogElement>)
+            blogsUIs.map((blog:any) => <BlogElement key={ blog.id } { ...blog } ></BlogElement>)
           }
         </BlogsContainer>
       </HomePageContainer>

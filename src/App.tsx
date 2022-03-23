@@ -11,7 +11,8 @@ function App() {
       <Routes>
         <Route path='/'>
           <Route index element={ <HomePage/> } ></Route>
-          <Route path="blog" >
+          <Route path="home" element={ <HomePage/> } ></Route>
+          <Route path="blog">
             <Route index element={ <HomePage/> } ></Route>
             <Route path="20220323-01_understanding-bitwise-operators" element={ <BlogPage202203201/> }></Route>
           </Route>
