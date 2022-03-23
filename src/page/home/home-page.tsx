@@ -33,7 +33,7 @@ const HomePage = () => {
     return blogItem;
   });
 
-  // blogsUIs.reverse();
+  blogsUIs.reverse();
 
   return (
     <Container>
