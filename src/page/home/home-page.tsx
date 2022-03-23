@@ -3,6 +3,7 @@ import BlogElement from "./components/blog-element";
 import { URLSearchParamsInit, useSearchParams } from "react-router-dom";
 import { BlogRepository } from "_database_/blog-repository";
 import { deepClone } from "utils/Util";
+import { BaseContent, Container } from "common/Common";
 
 const HomePage = () => {
   const [searchParams] = useSearchParams();
@@ -32,37 +33,23 @@ const HomePage = () => {
     return blogItem;
   });
 
+  // blogsUIs.reverse();
+
   return (
     <Container>
-      <HomePageContainer>
+      <BaseContent>
         <h1>Content</h1>
         <BlogsContainer>
           {
             blogsUIs.map((blog:any) => <BlogElement key={ blog.id } { ...blog } ></BlogElement>)
           }
         </BlogsContainer>
-      </HomePageContainer>
+      </BaseContent>
     </Container>
   )
 }
 
 export default HomePage;
-
-const Container = styled.div`
-background: #fcfafa;
-// background: #fbfbfd;
-// background-image: linear-gradient(-15deg,rgba(255,122,24,.25),#fff);
-// background: #eaeaea;
-width: 100%;
-min-height: 100vh;
-`;
-
-const HomePageContainer = styled.div`
-max-width: 888px;
-padding-top: 24px;
-margin-left: auto;
-margin-right: auto;
-`;
 
 const BlogsContainer = styled.div`
 padding: 20px;

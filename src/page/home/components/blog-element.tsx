@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
+import { Tag } from "common/Common";
 
 export default (props: any) => {
   return (
@@ -36,17 +37,4 @@ color: black;
 `;
 
 const TagContainer = styled.div`
-`;
-
-const Tag = styled(Link)`
-line-height: 16px;
-white-space: nowrap;
-display: inline-block;
-padding: 4px;
-&:hover {
-  cursor: pointer;
-}
-margin-left: 4px;
-text-decoration: none;
-color: black;
 `;

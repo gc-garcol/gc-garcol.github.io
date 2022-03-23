@@ -5,3 +5,60 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.width-50 {
+  width: 50%;
+}
+
+.mg-t-4 {
+  margin-top: 4px;
+}
+
+.mg-t-8 {
+  margin-top: 8px;
+}
+
+.mg-t-12 {
+  margin-top: 12px;
+}
+
+.mg-t-16 {
+  margin-top: 16px;
+}
+
+.mg-t-20 {
+  margin-top: 20px;
+}
+
+.mg-l-4 {
+  margin-left: 4px;
+}
+
+.mg-l-8 {
+  margin-left: 8px;
+}
+
+.mg-l-12 {
+  margin-left: 12px;
+}
+
+.mg-l-16 {
+  margin-left: 16px;
+}
+
+.img.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p, li {
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 888px) {
+  .img.width-50 {
+    width: auto;
+    max-width: 100%;
+  }
+}

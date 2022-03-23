@@ -9,6 +9,15 @@ export const BlogRepository = {
 
   fetchAllBlogs: () => {
     return deepClone(blogs);
+  },
+
+  fetchBlogById: (id) => {
+    const post = deepClone(blogs[id]);
+    post.tags = post.tags.map(tagId => {
+      const { name, tagStyles } = deepClone(tags)[tagId];
+      return { name, tagStyles };
+    });
+    return post;
   }
   
 }
