@@ -4,6 +4,7 @@ export const blogs = {
     title: "Understanding bitwise operators",
     description: "",
     url: "/blog/20220323-01_understanding-bitwise-operators",
+    status: 'DONE',
     tags: ["bitwise"]
   },
   "20220323-02": {
@@ -11,6 +12,7 @@ export const blogs = {
     title: "Snowflake algorithm",
     description: "",
     url: "/blog/20220323-02_snowflake-algorithm",
+    status: 'PROCESSING',
     tags: ["bitwise", "algorithm"]
   }
 }

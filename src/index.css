@@ -56,6 +56,10 @@ p, li {
   line-height: 1.5;
 }
 
+.strike-imp {
+  text-decoration: line-through !important;
+}
+
 @media screen and (max-width: 888px) {
   .img.width-50 {
     width: auto;
