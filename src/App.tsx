@@ -2,7 +2,7 @@ import { BlogPage202203201 } from 'page/blog/20220323-01/BlogPage.2022032-01';
 import HomePage from 'page/home/home-page';
 import NotFound from 'page/notfound/NotFound';
 import TestPage from 'page/test/TestPage';
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 function App() {

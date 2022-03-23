@@ -1,21 +1,15 @@
-import { BlogElementProps } from "./blog-element.type";
 import styled from "styled-components";
-import {useNavigate} from 'react-router-dom';
-import { useCallback } from "react";
-import { onClickTag } from "utils/tag-util";
+import { Link } from 'react-router-dom';
 
 export default (props: any) => {
-  const navigate = useNavigate();
-  const handleNavigate = useCallback(() => navigate(`${props.url}`, {replace: true}), [navigate]);
   return (
     <BlogElementContainer>
-      <Title onClick={handleNavigate} >{ props.title }</Title>
+      <Title to={ props.url } >{ props.title }</Title>
       <TagContainer>
         {
           props.tags.map((tag: any) => {
-            const handleNavigateTag = useCallback(() => navigate(`/home?tag=${tag.name}`, {replace: true}), [navigate]);
             return (
-              <Tag onClick={() => onClickTag(tag.name, handleNavigateTag) } key={ tag.name } style={ tag.tagStyles } >{ tag.name }</Tag>
+              <Tag to={ `/home?tag=${tag.name}` } key={ tag.name } style={ tag.tagStyles } >{ tag.name }</Tag>
             );
           })
         }
@@ -31,17 +25,20 @@ align-items: center;
 padding: 8px 0;
 `;
 
-const Title = styled.p`
+const Title = styled(Link)`
 &:hover {
   cursor: pointer;
   font-weight: 600;
+}
+text-decoration: none;
+color: black;
 }
 `;
 
 const TagContainer = styled.div`
 `;
 
-const Tag = styled.span`
+const Tag = styled(Link)`
 line-height: 16px;
 white-space: nowrap;
 display: inline-block;
@@ -50,4 +47,6 @@ padding: 4px;
   cursor: pointer;
 }
 margin-left: 4px;
+text-decoration: none;
+color: black;
 `;
