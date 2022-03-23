@@ -1,24 +1,24 @@
-import { blogs, tags } from "_database_/home-page"
 import styled from "styled-components";
 import BlogElement from "./components/blog-element";
+import { URLSearchParamsInit, useSearchParams } from "react-router-dom";
+import { BlogRepository } from "_database_/blog-repository";
 import { deepClone } from "utils/Util";
-import { useNavigate, useSearchParams } from "react-router-dom";
-import { useCallback } from "react";
 
 const HomePage = () => {
   const [searchParams] = useSearchParams();
   let blogsUIs: any;
-  let tagClone = deepClone(tags);
-  let blogClone = deepClone(blogs);
+  let tags = BlogRepository.fetchAllTags();
+  let blogs = BlogRepository.fetchAllBlogs();
 
+  // todo refactor for filtering
   const tag: any = searchParams.get('tag');
   if (tag) {
-    if (!tagClone[tag]) {
+    if (!tags[tag]) {
       window.location.href = '/404';
       return (<div></div>);
     }
-    const postIDs = tagClone[tag].postIDs;
-    blogsUIs = Object.values(deepClone(postIDs.map((id: string) => blogClone[id])));
+    const postIDs = tags[tag].postIDs;
+    blogsUIs = Object.values(deepClone(postIDs.map((id: string) => blogs[id])));
   } else {
     blogsUIs = Object.values(blogs);
   }
@@ -26,7 +26,7 @@ const HomePage = () => {
   blogsUIs = blogsUIs.map((blog: any) => {
     const blogItem = deepClone(blog);
     blogItem.tags = blogItem.tags.map((tag: string): any => {
-      const {name, tagStyles} = tagClone[tag];
+      const {name, tagStyles} = tags[tag];
       return {name, tagStyles};
     })
     return blogItem;
@@ -68,3 +68,7 @@ const BlogsContainer = styled.div`
 padding: 20px;
 background-color: #ffffff;
 `
+
+const filter = (searchParams: URLSearchParamsInit) => {
+
+}
