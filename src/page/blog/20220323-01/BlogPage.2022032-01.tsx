@@ -14,6 +14,7 @@ export const BlogPage202203201 = () => {
       <BaseContent className="base-content">
         <Title>{ blog.title }</Title>
         <TagsContainer>
+          <span>Tags: </span>
           {
             blog.tags.map(tag => {
               return (
@@ -38,7 +39,8 @@ export const BlogPage202203201 = () => {
           </ul>
           
           <H2 className="mg-t-20">Example</H2>
-          <p className="mg-t-16"><b>Đảo</b> các bit x1001xx của '1100100' (decimal = 100)</p>
+          <p className="mg-t-16">Đề bài: <b>Đảo</b> các bit x1001xx của '1100100' (decimal = 100)</p>
+          <p className="mg-t-8">Hướng giải quyết: dùng phép <b>XOR</b> với mark là ...0111100</p>
           <p className="mg-t-8"></p>
           <CopyBlock
             language={"javascript"}
