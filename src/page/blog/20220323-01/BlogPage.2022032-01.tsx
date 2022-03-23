@@ -44,7 +44,7 @@ export const BlogPage202203201 = () => {
           <p className="mg-t-8"></p>
           <CopyBlock
             language={"javascript"}
-            text={`//
+            text={`// Javascript
 let pattern = parseInt('1100100', 2); // pattern === 100 && Number(100).toString(2) === '1100100'
 let mark = parseInt('1111', 2) << 2; // mark === 60 && Number(60).toString(2) === '111100'
 let result = pattern ^ mark; // result === 88 && Number(88).toString(2) === '1011000'
