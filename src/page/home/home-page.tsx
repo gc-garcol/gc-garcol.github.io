@@ -49,14 +49,17 @@ const HomePage = () => {
 export default HomePage;
 
 const Container = styled.div`
-background: #fbfbfd;
+background: #fcfafa;
+// background: #fbfbfd;
+// background-image: linear-gradient(-15deg,rgba(255,122,24,.25),#fff);
+// background: #eaeaea;
 width: 100%;
 min-height: 100vh;
 `;
 
 const HomePageContainer = styled.div`
 max-width: 888px;
-margin-top: 24px;
+padding-top: 24px;
 margin-left: auto;
 margin-right: auto;
 `;
