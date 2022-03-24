@@ -1,5 +1,7 @@
+import MenuBar from "common/components/menu/MenuBar"
+
 export default () => {
   return (
-    <div>Test Page</div>
+    <MenuBar></MenuBar>
   )
 }
