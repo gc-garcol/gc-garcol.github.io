@@ -39,8 +39,9 @@ const HomePage = () => {
       <BaseContent>
         <TitleWrapper className="title-wrapper">
           <h1 style={ {marginRight: '16px'} }>Content</h1>
+          <Tag to={ `/` } style={ { backgroundColor: '#ed894c', fontWeight: 'bold' } } >#all</Tag>
           {
-            tag && <Tag to={ `/home?tag=${tags[tag].name}` } key={ tags[tag].name } style={ tags[tag].tagStyles } >{ tags[tag].name }</Tag>
+            tag && <Tag to={ `/home?tag=${tags[tag].name}` } style={ tags[tag].tagStyles } >{ tags[tag].name }</Tag>
           }
         </TitleWrapper>
         <BlogsContainer>
