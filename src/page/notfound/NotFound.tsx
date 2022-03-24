@@ -1,17 +1,19 @@
 import styled from "styled-components"
 
 export default () => {
-  const containerStyle = {
-    margin: '50px auto 40px auto',
-    width: '600px',
-    textAlign: 'center' as const
-  }
   return (
     <Container style={ containerStyle }>
       <H1>404</H1>
       <p><strong>Page not found</strong></p>
     </Container>
   )
+}
+
+const containerStyle = {
+  margin: '50px auto 40px auto',
+  width: '600px',
+  maxWidth: '100%',
+  textAlign: 'center' as const
 }
 
 const Container = styled.div`
