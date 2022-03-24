@@ -15,6 +15,7 @@ max-width: 888px;
 padding: 40px 16px 40px 16px;
 margin-left: auto;
 margin-right: auto;
+background-color: #ffffff;
 `;
 
 export const Tag = styled(Link)`
