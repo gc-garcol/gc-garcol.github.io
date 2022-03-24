@@ -4,8 +4,8 @@ import styled from "styled-components"
 export default () => {
   return (
     <Container className="container">
-      <LogoWrapper>
-        <Logo className="" src={ require('./resources/docker.png') } alt="" />
+      <LogoWrapper to="/">
+        <Logo className="" src={ require('./resources/fox-2.png') } alt="" />
         <LogoName>Garcol</LogoName>
       </LogoWrapper>
       <MenuWrapper>
@@ -21,10 +21,11 @@ justify-content: space-between;
 align-items: center;
 padding: 0 32px;
 
-background: rgba(251, 251, 251, 0.8);
+background: rgb(244 243 239 / 80%);
 color: var(--color-text-default);
 height: 56px;
 position: sticky;
+top: 0;
 box-shadow: 0px 4px 8px -2px rgb(255 255 255 / 16%);
 
 @media (max-width: 768px) {
@@ -32,9 +33,10 @@ box-shadow: 0px 4px 8px -2px rgb(255 255 255 / 16%);
 }
 `;
 
-const LogoWrapper = styled.div`
+const LogoWrapper = styled(Link)`
 display: flex;
 align-items: center;
+text-decoration: none;
 `
 
 const Logo = styled.img`
@@ -44,7 +46,7 @@ height: 56px;
 const LogoName = styled.p`
 font-weight: bold;
 font-size: 24px;
-color: #b2b3b3;
+color: #ff8401;
 `
 
 const MenuWrapper = styled.div``

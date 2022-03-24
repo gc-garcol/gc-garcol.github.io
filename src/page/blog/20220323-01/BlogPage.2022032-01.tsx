@@ -3,6 +3,7 @@ import { BlogRepository } from "_database_/blog-repository";
 import { BlogType } from "page/blog/BlogPage.type";
 import { Title, TagsContainer, ContentContainer, H2 } from "../_common_/blog-common";
 import { CopyBlock, dracula } from "react-code-blocks";
+import MenuBar from "common/components/menu/MenuBar";
 
 const ID = "20220323-01";
 export const BlogPage202203201 = () => {
@@ -11,6 +12,7 @@ export const BlogPage202203201 = () => {
 
   return (
     <Container className="container">
+      <MenuBar />
       <BaseContent className="base-content">
         <Title>{ blog.title }</Title>
         <TagsContainer>

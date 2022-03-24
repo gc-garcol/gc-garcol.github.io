@@ -4,6 +4,7 @@ import { Link, URLSearchParamsInit, useSearchParams } from "react-router-dom";
 import { BlogRepository } from "_database_/blog-repository";
 import { deepClone } from "utils/Util";
 import { BaseContent, Container, Tag } from "common/Common";
+import MenuBar from "common/components/menu/MenuBar";
 
 const HomePage = () => {
   const [searchParams] = useSearchParams();
@@ -36,6 +37,7 @@ const HomePage = () => {
 
   return (
     <Container>
+      <MenuBar />
       <BaseContent>
         <TitleWrapper className="title-wrapper">
           <h1 style={ {marginRight: '16px'} }>Content</h1>
