@@ -17,6 +17,7 @@ function App() {
             <Route path="20220323-01_understanding-bitwise-operators" element={ <BlogPage202203201/> }></Route>
           </Route>
           <Route path='test' element={ <TestPage/> }></Route>
+          <Route path='404' element={ <NotFound/> }></Route>
           <Route path='*' element={ <NotFound/> }></Route>
         </Route>
       </Routes>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components"
 
 export default () => {
@@ -5,6 +6,7 @@ export default () => {
     <Container style={ containerStyle }>
       <H1>404</H1>
       <p><strong>Page not found</strong></p>
+      <GoBackHome className="go-back-home" to="/">Click here to go back home</GoBackHome>
     </Container>
   )
 }
@@ -30,3 +32,10 @@ font-weight: 100;
 margin: 0px 0 50px 0;
 text-shadow: 0 1px 0 #fff;
 `;
+
+const GoBackHome = styled(Link)`
+text-decoration: none;
+color: black;
+display: inline-block;
+margin-top: 24px;
+`

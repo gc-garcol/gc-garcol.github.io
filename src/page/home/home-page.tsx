@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import BlogElement from "./components/blog-element";
-import { URLSearchParamsInit, useSearchParams } from "react-router-dom";
+import { Link, URLSearchParamsInit, useSearchParams } from "react-router-dom";
 import { BlogRepository } from "_database_/blog-repository";
 import { deepClone } from "utils/Util";
 import { BaseContent, Container, Tag } from "common/Common";
@@ -15,8 +15,7 @@ const HomePage = () => {
   const tag: any = searchParams.get('tag');
   if (tag) {
     if (!tags[tag]) {
-      window.location.href = '/404';
-      return (<div></div>);
+      return <Link to="/404"></Link>
     }
     const postIDs = tags[tag].postIDs;
     blogsUIs = Object.values(deepClone(postIDs.map((id: string) => blogs[id])));
