@@ -5,7 +5,7 @@ import { Tag } from "common/Common";
 export default (props: any) => {
   return (
     <BlogElementContainer>
-      <Title to={ props.url } className={ props.status === 'PROCESSING' ? 'strike-imp' : '' } >{ props.title }</Title>
+      <Title to={ props.url } className={ props.status !== 'DONE' ? 'strike-imp' : '' } >{ props.title }</Title>
       <TagContainer>
         {
           props.tags.map((tag: any) => {
