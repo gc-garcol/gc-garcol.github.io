@@ -41,7 +41,7 @@ const HomePage = () => {
       <BaseContent>
         <TitleWrapper className="title-wrapper">
           <h1 style={ {marginRight: '16px'} }>Content</h1>
-          <Tag to={ `/` } style={ { backgroundColor: '#ed894c', fontWeight: 'bold' } } >#all</Tag>
+          <Tag to={ `/` } style={ { backgroundColor: '#ed894c', fontWeight: 'bold', marginRight: '4px' } } >#all</Tag>
           {
             tag && <Tag to={ `/home?tag=${tags[tag].name}` } style={ tags[tag].tagStyles } >{ tags[tag].name }</Tag>
           }

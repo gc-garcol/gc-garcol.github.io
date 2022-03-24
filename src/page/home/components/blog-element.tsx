@@ -33,8 +33,16 @@ const Title = styled(Link)`
 }
 text-decoration: none;
 color: black;
+display: inline-block;
+min-width: 50%;
 }
 `;
 
 const TagContainer = styled.div`
+display: flex;
+flex-wrap: wrap;
+column-gap: 4px;
+row-gap: 4px;
+justify-content: end;
+}
 `;

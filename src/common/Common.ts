@@ -26,7 +26,7 @@ padding: 4px;
 &:hover {
   cursor: pointer;
 }
-margin-left: 4px;
+// margin-left: 4px;
 text-decoration: none;
 color: black;
 `;
