@@ -26,7 +26,7 @@ padding: 4px;
 &:hover {
   cursor: pointer;
 }
-// margin-left: 4px;
+margin-left: 4px; // in case row-gap not working
 text-decoration: none;
 color: black;
 `;
