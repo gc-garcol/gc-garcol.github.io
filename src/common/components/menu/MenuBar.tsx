@@ -10,6 +10,7 @@ export default () => {
       </LogoWrapper>
       <MenuWrapper>
         <PageLink to="/">Home</PageLink>
+        <PageLink to="/about">About</PageLink>
       </MenuWrapper>
     </Container>
   )
@@ -49,7 +50,10 @@ font-size: 24px;
 color: #ff8401;
 `
 
-const MenuWrapper = styled.div``
+const MenuWrapper = styled.div`
+display: flex;
+column-gap: 8px;
+`
 
 const PageLink = styled(Link)`
 text-decoration: none;
