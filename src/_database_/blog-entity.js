@@ -22,6 +22,14 @@ export const blogs = {
     url: "/blog/20220324-01_leetcode_unique-paths",
     status: 'DONE',
     tags: ["leetcode", "algorithm", "dynamic programming"]
+  },
+  "20220324-02": {
+    id: "20220324-02",
+    title: "[Leetcode] container-with-most-water",
+    description: "",
+    url: "/blog/20220324-02_leetcode_container-with-most-water",
+    status: 'DONE',
+    tags: ["leetcode", "algorithm", "dynamic programming"]
   }
 }
 
@@ -35,21 +43,21 @@ export const tags = {
   },
   ["algorithm"]: {
     name: "algorithm",
-    postIDs: ["20220323-02", "20220324-01"],
+    postIDs: ["20220323-02", "20220324-01", "20220324-02"],
     tagStyles: {
       background: '#cce7e1'
     }
   },
   ["leetcode"]: {
     name: "leetcode",
-    postIDs: ["20220324-01"],
+    postIDs: ["20220324-01", "20220324-02"],
     tagStyles: {
       background: '#fce4ec'
     }
   },
   ["dynamic programming"]: {
     name: "dynamic programming",
-    postIDs: ["20220324-01"],
+    postIDs: ["20220324-01", "20220324-02"],
     tagStyles: {
       background: 'rgb(216 190 176)'
     }

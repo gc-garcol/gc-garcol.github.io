@@ -35,7 +35,7 @@ export const BlogPage2022032401 = () => {
           
           <H3 className="mg-t-16">Example:</H3>
           <pre className="leetcode mg-t-8">
-            <p><strong>Input:</strong>m = 3, n = 2</p>
+            <p><strong>Input:</strong> m = 3, n = 2</p>
             <p><strong>Output:</strong> 3</p>
             <p><strong>Explanation:</strong></p>
             <p>From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:</p>
@@ -53,7 +53,7 @@ export const BlogPage2022032401 = () => {
           </pre>
           <H3 className="mg-t-16">Java solution</H3>
           <CopyBlock
-            language={"javascript"}
+            language={"java"}
             text={`// JAVA
 class Solution {
     public int uniquePaths(int m, int n) {
