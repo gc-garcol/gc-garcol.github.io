@@ -3,7 +3,7 @@ import BlogElement from "./components/blog-element";
 import { URLSearchParamsInit, useSearchParams } from "react-router-dom";
 import { BlogRepository } from "_database_/blog-repository";
 import { deepClone } from "utils/Util";
-import { BaseContent, Container } from "common/Common";
+import { BaseContent, Container, Tag } from "common/Common";
 
 const HomePage = () => {
   const [searchParams] = useSearchParams();
@@ -38,7 +38,12 @@ const HomePage = () => {
   return (
     <Container>
       <BaseContent>
-        <h1>Content</h1>
+        <TitleWrapper className="title-wrapper">
+          <h1 style={ {marginRight: '16px'} }>Content</h1>
+          {
+            tag && <Tag to={ `/home?tag=${tags[tag].name}` } key={ tags[tag].name } style={ tags[tag].tagStyles } >{ tags[tag].name }</Tag>
+          }
+        </TitleWrapper>
         <BlogsContainer>
           {
             blogsUIs.map((blog:any) => <BlogElement key={ blog.id } { ...blog } ></BlogElement>)
@@ -50,6 +55,12 @@ const HomePage = () => {
 }
 
 export default HomePage;
+
+const TitleWrapper = styled.div`
+display: flex;
+align-items: center;
+margin-bottom: 32px;
+`
 
 const BlogsContainer = styled.div`
 padding: 20px;
