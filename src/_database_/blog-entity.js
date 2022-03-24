@@ -21,7 +21,7 @@ export const blogs = {
     description: "",
     url: "/blog/20220324-01_leetcode_unique-paths",
     status: 'DONE',
-    tags: ["leetcode", "algorithm"]
+    tags: ["leetcode", "algorithm", "dynamic programming"]
   }
 }
 
@@ -45,6 +45,13 @@ export const tags = {
     postIDs: ["20220324-01"],
     tagStyles: {
       background: '#fce4ec'
+    }
+  },
+  ["dynamic programming"]: {
+    name: "dynamic programming",
+    postIDs: ["20220324-01"],
+    tagStyles: {
+      background: 'rgb(216 190 176)'
     }
   }
 }
