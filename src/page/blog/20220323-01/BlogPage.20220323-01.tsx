@@ -6,7 +6,7 @@ import { CopyBlock, dracula } from "react-code-blocks";
 import MenuBar from "common/components/menu/MenuBar";
 
 const ID = "20220323-01";
-export const BlogPage202203201 = () => {
+export const BlogPage2022032301 = () => {
 
   const blog: BlogType = BlogRepository.fetchBlogById(ID);
 

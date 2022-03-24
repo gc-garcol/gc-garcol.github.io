@@ -13,3 +13,13 @@ export const ContentContainer = styled.div`
 export const H2 = styled.h2`
 margin-top: 24px;
 `
+
+export const H3 = styled.h3`
+margin-top: 24px;
+`
+
+export const RefLink = styled.a`
+text-decoration: none;
+color: #07a;
+display: inline-block;
+`
