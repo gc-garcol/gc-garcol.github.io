@@ -52,10 +52,11 @@ color: #ff8401;
 
 const MenuWrapper = styled.div`
 display: flex;
-column-gap: 8px;
+// column-gap: 8px;
 `
 
 const PageLink = styled(Link)`
 text-decoration: none;
 color: black;
+margin-left: 8px;
 `
