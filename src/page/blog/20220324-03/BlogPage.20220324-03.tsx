@@ -82,7 +82,7 @@ export const BlogPage2022032403 = () => {
           <div className="mg-l-16">
             <MathJaxContext>
               <p className="mg-t-8"></p>
-              <MathJax className="mathjax-block">{ "\\(x = lowerbound + x'.\\frac{domainLength}{totalFragement}  \\)" }</MathJax>
+              <MathJax className="mathjax-block">{ "\\(x = lowerbound + x'.\\frac{domainLength}{totalFragment}  \\)" }</MathJax>
               <p className="mg-t-8">Tương ứng với bài toán sẽ là: </p>
               <MathJax className="mathjax-block">{ "\\(x = -1 + x'.\\frac{3}{2^{22} - 1} = -1 + x' . \\frac{3}{4194303} \\)" }</MathJax>
             </MathJaxContext>
@@ -99,7 +99,7 @@ export const BlogPage2022032403 = () => {
 
           <H3>4. Sử dụng phép toán di truyền</H3>
           <p className="mg-t-16"><b>a. Phép lai (crossover):</b></p>
-          <p>Ví dụ lai giữa 2 nhiễm sắc thể <span className="mathjax-inline-block">(0101110111)</span> và <span className="mathjax-inline-block">(1110000000)</span> ở vị trí thứ 3 (chọn ngẫu nhiên):</p>
+          <p>Ví dụ lai giữa 2 nhiễm sắc thể <span className="mathjax-inline-block">(0101110111)</span> và <span className="mathjax-inline-block">(1110000000)</span> ở vị trí thứ 6 (chọn ngẫu nhiên):</p>
           <img className="img width width-80 mg-t-8" src={ require('./resources/003_crossover.png') } alt="" />
           <p className="mg-t-16"><b>a. Phép đột biến (mutation):</b></p>
           <p>Phép đột biến thay đổi (đảo bit) 1 bit bất kì của nhiễm sắt thể.</p>
@@ -108,10 +108,77 @@ export const BlogPage2022032403 = () => {
           <p className="mg-t-16 mg-l-8">• Kích thước quần thể: pop-size = 50</p>
           <p className="mg-t-8 mg-l-8">• Xác suất lai tạo: p<sub>cross</sub> = 0.25: chromosome trong population có 25% cơ hội để thực hiện phép lai</p>
           <p className="mg-t-8 mg-l-8">• Xác suất đột biến: p<sub>muta</sub> = 0.01: xác suất để 1 bit bất kì của 1 chromosome trong quần thể bị đột biến</p>
-        </ContentContainer>
 
-        <H3>Coding example:</H3>
-        <p>continue...</p>
+          <H3>Coding example</H3>
+          <p>Tham khảo: <RefLink className="blog-tag" target="_blank" href="/#/blog/20220323-01_understanding-bitwise-operators">Understanding bitwise</RefLink></p>
+          <RefLink className="20220324-03__introduction mg-t-8" target="_blank" href="https://github.com/gc-garcol/blog-demo/tree/master/blog-20220324-03">Source code</RefLink>
+          <p className="mg-t-16"><b>Mô hình hoá nhiễm sắc thể</b></p>
+          <p className="mg-t-16">Biểu diễn nhiễm sắt thể dưới dạng long value:</p>
+          <CopyBlock
+            language={"java"}
+            text={` // Chromosome.java
+    long value;
+    int length;
+`}
+            showLineNumbers={ false }
+            theme={dracula}
+            wrapLines={true}
+            codeBlock
+          />
+
+          <p className="mg-t-16"><b>Phép toán đột biến</b></p>
+          <CopyBlock
+            language={"java"}
+            text={` // ChromosomeOperator.java
+    long value = chromosome.getValue();
+    long newValue = value ^ (1 << index);
+}
+`}
+            showLineNumbers={ false }
+            theme={dracula}
+            wrapLines={true}
+            codeBlock
+          />
+
+          <p className="mg-t-16"><b>Phép toán lai tạo</b></p>
+          <CopyBlock
+            language={"java"}
+            text={` // ChromosomeOperator.java
+    long rightMark = (1 << (index + 1)) - 1;
+    long leftMark = rightMark ^ 0xffffff;
+
+    long leftParent = father.value & leftMark;
+    long rightParent = father.value & rightMark;
+
+    long leftMother = father.value & leftMark;
+    long rightMother = father.value & rightMark;
+
+    Chromosome firstChild = Chromosome.of(leftParent + rightMother, length);
+    Chromosome secondChild = Chromosome.of(leftMother + rightParent, length);
+}
+`}
+            showLineNumbers={ false }
+            theme={dracula}
+            wrapLines={true}
+            codeBlock
+          />  
+
+          <p className="mg-t-16"><b>Lặp lại việc call hàm "evolve" cho đến khi thoã mãn điều kiện dừng</b></p>
+          <CopyBlock
+            language={"java"}
+            text={` // GeneticAlgorithm.java
+    private void evolve() {
+        doSelection();
+        doCrossovers();
+        doMutations();
+    }
+`}
+            showLineNumbers={ false }
+            theme={dracula}
+            wrapLines={true}
+            codeBlock
+          />
+        </ContentContainer>
       </BaseContent>
     </Container>
   );
