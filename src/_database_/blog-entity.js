@@ -33,9 +33,9 @@ export const blogs = {
   },
   "20220324-03": {
     id: "20220324-03",
-    title: "Generic algorithm",
+    title: "Genetic algorithm",
     description: "",
-    url: "/blog/20220324-03_generic-algorithm",
+    url: "/blog/20220324-03_genetic-algorithm",
     status: 'DONE',
     tags: ["algorithm", "AI"]
   }
