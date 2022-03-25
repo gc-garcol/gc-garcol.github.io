@@ -34,7 +34,7 @@ export const BlogPage2022032403 = () => {
             để cải tiến lời giải và khảo sát không gian lời giải</p>
           <p className="mg-t-12">Ví dụ về sự tiến hoá của quần thể thỏ: </p>
           <p className="mg-t-8">Có một quần thể thỏ. Trong số đó sẽ có những con nhanh nhẹn và thông minh hơn những con khác(<b>alpha thỏ</b>).
-          Thỏ alpha có xác suất bị cáo ăn thịt nhỏ hơn, do đó chúng tồn tại lâu hơn để <b>Tạo thêm nhiều thỏ tốt</b>. 
+          Thỏ alpha có xác suất bị cáo ăn thịt nhỏ hơn, do đó chúng tồn tại lâu hơn để <b>tạo thêm nhiều thỏ tốt</b>. 
           Dĩ nhiên, một số thỏ chậm chạp đần đồn cũng sống chỉ vì may mắn. Quần thể những chú thỏ sống sát sẽ bắt đầu sinh sản. 
           Việc sinh sản này sẽ tạo ra một hỗn hợp tốt về "nguyên liệu di truyền thỏ".
           Thiên nhiên thỉnh thoảng lại ném vào một con thỏ "hoang dã" bằng cách làm đột biến nguyên liệu di truyền thỏ. 
@@ -44,7 +44,7 @@ export const BlogPage2022032403 = () => {
           <H2>Ví dụ về tối ưu hàm một biến</H2>
           <p className="mg-t-16">Xét bài toàn tối ưu không ràng buộc sau:</p>
           <MathJaxContext>
-            <MathJax>{ "\\(\\max f(x) = x * \\sin(10\\pi * x) \\) + 1.0, trong đó: \\(x \\in [-1, 2]  \\)" }</MathJax>
+            <MathJax>{ "\\(\\max f(x) = x . \\sin(10\\pi . x) \\) + 1.0, trong đó: \\(x \\in [-1, 2]  \\)" }</MathJax>
           </MathJaxContext>
           <img className="img width-50 mg-t-8" src={ require("./resources/001_graph.png") } alt="" />
           {/* <p>Đạo hàm bất nhất: </p>
