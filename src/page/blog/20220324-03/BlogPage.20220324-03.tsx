@@ -16,7 +16,6 @@ export const BlogPage2022032403 = () => {
       <MenuBar />
       <BaseContent className="base-content">
         <Title>{ blog.title }</Title>
-        <p style={ { } }> Bài viết tham khảo ở tài liệu Trí tuệ nhân tạo - Lập trình tiến hoá của <b>Ts. Nguyễn Đình Thúc</b> </p>
         <TagsContainer>
           <span className="text-bold">Tags: </span>
           <BlogTag to="/">#all</BlogTag>
@@ -28,6 +27,7 @@ export const BlogPage2022032403 = () => {
             })
           }
         </TagsContainer>
+        <p className="mg-t-16"> Bài viết tham khảo ở tài liệu Trí tuệ nhân tạo - Lập trình tiến hoá của <b>Ts. Nguyễn Đình Thúc</b> </p>
         <ContentContainer>
           <H2>Khái niệm cơ bản</H2>
           <p className="mg-t-16"><b>Generic Algorithm</b> là một loại giải thuật mô phỏng các hiện tượng tự nhiên: <b>kế thừa</b> và <b>đấu tranh sinh tồn </b> 
