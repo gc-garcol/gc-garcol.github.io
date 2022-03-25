@@ -30,6 +30,14 @@ export const blogs = {
     url: "/blog/20220324-02_leetcode_container-with-most-water",
     status: 'PROCESSING',
     tags: ["leetcode", "algorithm", "dynamic programming"]
+  },
+  "20220324-03": {
+    id: "20220324-03",
+    title: "Generic algorithm",
+    description: "",
+    url: "/blog/20220324-03_generic-algorithm",
+    status: 'DONE',
+    tags: ["algorithm", "AI"]
   }
 }
 
@@ -43,7 +51,7 @@ export const tags = {
   },
   ["algorithm"]: {
     name: "algorithm",
-    postIDs: ["20220323-02", "20220324-01", "20220324-02"],
+    postIDs: ["20220323-02", "20220324-01", "20220324-02", "20220324-03"],
     tagStyles: {
       background: '#cce7e1'
     }
@@ -60,6 +68,13 @@ export const tags = {
     postIDs: ["20220324-01", "20220324-02"],
     tagStyles: {
       background: 'rgb(216 190 176)'
+    }
+  },
+  ["AI"]: {
+    name: "AI",
+    postIDs: ["20220324-03"],
+    tagStyles: {
+      background: '#faf09f'
     }
   }
 }

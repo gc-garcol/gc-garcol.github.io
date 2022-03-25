@@ -1,4 +1,7 @@
- # [Emoji](https://www.w3schools.com/charsets/ref_emoji_smileys.asp)
+ # Emoji
+- https://www.w3schools.com/charsets/ref_emoji_smileys.asp
+- https://getemoji.com/
+- https://unicode.org/emoji/charts/full-emoji-list.html 
 
 Example:
 
