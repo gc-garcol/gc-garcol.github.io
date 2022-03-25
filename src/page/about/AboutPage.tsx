@@ -6,7 +6,7 @@ export default () => {
     <Container style={ containerStyle }>
       <H1>Hello</H1>
       <p>This is my <strong>memorization page</strong></p>
-      <GoBackHome className="go-back-home" to="/">Click here to go back home</GoBackHome>
+      <GoBackHome className="go-back-home" to="/">Click here to go <b style={ { fontWeight: 'bold' } }>back home</b></GoBackHome>
     </Container>
   )
 }
