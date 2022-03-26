@@ -94,6 +94,11 @@ export const BlogPage2022032601 = () => {
             </FeatureWrapper>
           </ContentWrapper>
 
+          <H2>Good for reading</H2>
+          <Feature style={{ marginTop: 16 }} className="blue" target="_blank" href="https://github.com/FasterXML/jacksonhttps://dzone.com/articles/how-to-reach-500k-opssec-with-only-3-redis-nodes-i">Reaching 500K Ops/Sec With Only 3 Redis Nodes</Feature>
+          <Feature className="blue" target="_blank" href="https://dzone.com/articles/distributed-tasks-execution-and-scheduling-in-java">Distributed tasks Execution and Scheduling in Java, powered by Redis</Feature>
+          {/* <Feature className="blue" target="_blank" href="https://evuvatech.com/2016/02/05/distributed-lock-with-redis/">Distributed lock with Redis</Feature> */}
+          <Feature className="blue" target="_blank" href="https://www.baeldung.com/redis-redisson">A Guide to Redis with Redisson</Feature>
         </ContentContainer>
       </BaseContent>
     </Container>
@@ -122,5 +127,9 @@ color: #000000;
 }
 &.red {
   color: red;
+}
+
+&.blue {
+  color: #4c6a98;
 }
 `
