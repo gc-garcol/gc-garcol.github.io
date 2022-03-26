@@ -28,7 +28,7 @@ export const blogs = {
     title: "[Leetcode] container-with-most-water",
     description: "",
     url: "/blog/20220324-02_leetcode_container-with-most-water",
-    status: 'PROCESSING',
+    status: 'DONE',
     tags: ["leetcode", "algorithm", "dynamic programming"]
   },
   "20220324-03": {
