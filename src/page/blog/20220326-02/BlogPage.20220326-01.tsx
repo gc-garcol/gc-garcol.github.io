@@ -29,6 +29,8 @@ export const BlogPage2022032602 = () => {
           }
         </TagsContainer>
         <ContentContainer>
+          <H2>About</H2>
+          <RefLink className="20220324-01__introduction mg-t-8" target="_blank" href="https://www.udemy.com/course/design-microservices-architecture-with-patterns-principles/">Udemy courses: Design Microservices Architecture with Patterns & Principles</RefLink>
           <H2>Updating...</H2>
         </ContentContainer>
       </BaseContent>
