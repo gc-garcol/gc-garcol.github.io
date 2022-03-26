@@ -178,6 +178,8 @@ export const BlogPage2022032403 = () => {
             wrapLines={true}
             codeBlock
           />
+          <H3>Tính đúng đắn của giải thuật di truyền</H3>
+          <p className="mg-t-16">Continue...</p>
         </ContentContainer>
       </BaseContent>
     </Container>
