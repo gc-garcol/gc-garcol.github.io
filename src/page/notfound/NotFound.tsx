@@ -6,7 +6,7 @@ export default () => {
     <Container style={ containerStyle }>
       <H1>404</H1>
       <p><strong>Page not found</strong></p>
-      <GoBackHome className="go-back-home" to="/">Click here to go back home</GoBackHome>
+      <GoBackHome className="go-back-home" to="/">Click here to go <b style={ { fontWeight: 'bold' } }>back home</b></GoBackHome>
     </Container>
   )
 }
