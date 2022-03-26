@@ -46,6 +46,14 @@ export const blogs = {
     url: "/blog/20220326-01_redisson-features",
     status: 'DONE',
     tags: ["architecture", "java"]
+  },
+  "20220326-02": {
+    id: "20220326-02",
+    title: "CQRS Design Pattern in Microservices Architectures",
+    description: "",
+    url: "/blog/20220326-02_CQRS_Design_Pattern_in_Microservices_Architectures",
+    status: 'PROCESSING',
+    tags: ["architecture"]
   }
 }
 
@@ -87,7 +95,7 @@ export const tags = {
   },
   ["architecture"]: {
     name: "architecture",
-    postIDs: ["20220326-01"],
+    postIDs: ["20220326-01", "20220326-02"],
     tagStyles: {
       background: '#fcc4e7'
     }
