@@ -18,7 +18,7 @@ export const BlogPage2022032403 = () => {
         <Title>{ blog.title }</Title>
         <TagsContainer>
           <span className="text-bold">Tags: </span>
-          <BlogTag to="/">#all</BlogTag>
+          <BlogTag to="/" style={ { backgroundColor: '#ed894c', fontWeight: 'bold', marginRight: '4px' }} >#all</BlogTag>
           {
             blog.tags.map(tag => {
               return (
@@ -178,7 +178,7 @@ export const BlogPage2022032403 = () => {
             wrapLines={true}
             codeBlock
           />
-          <H3>Tính đúng đắn của giải thuật di truyền</H3>
+          <H2>Tính đúng đắn của giải thuật di truyền</H2>
           <p className="mg-t-16">Continue...</p>
         </ContentContainer>
       </BaseContent>

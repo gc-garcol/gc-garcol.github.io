@@ -18,7 +18,7 @@ export const BlogPage2022032402 = () => {
         <p style={ { color: 'red' } }> Note: chưa pass hết test cases &#128514; </p>
         <TagsContainer>
           <span className="text-bold">Tags: </span>
-          <BlogTag to="/">#all</BlogTag>
+          <BlogTag to="/" style={ { backgroundColor: '#ed894c', fontWeight: 'bold', marginRight: '4px' }} >#all</BlogTag>
           {
             blog.tags.map(tag => {
               return (
