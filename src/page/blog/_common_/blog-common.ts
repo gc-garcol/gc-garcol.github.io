@@ -11,7 +11,7 @@ export const ContentContainer = styled.div`
 `
 
 export const H2 = styled.h2`
-margin-top: 24px;
+margin-top: 32px;
 `
 
 export const H3 = styled.h3`

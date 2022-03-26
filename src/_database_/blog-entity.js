@@ -38,6 +38,14 @@ export const blogs = {
     url: "/blog/20220324-03_genetic-algorithm",
     status: 'DONE',
     tags: ["algorithm", "AI"]
+  },
+  "20220326-01": {
+    id: "20220326-01",
+    title: "Reddison features",
+    description: "",
+    url: "/blog/20220326-01_redisson-features",
+    status: 'DONE',
+    tags: ["architecture", "java"]
   }
 }
 
@@ -75,6 +83,20 @@ export const tags = {
     postIDs: ["20220324-03"],
     tagStyles: {
       background: '#faf09f'
+    }
+  },
+  ["architecture"]: {
+    name: "architecture",
+    postIDs: ["20220326-01"],
+    tagStyles: {
+      background: '#fcc4e7'
+    }
+  },
+  ["java"]: {
+    name: "java",
+    postIDs: ["20220326-01"],
+    tagStyles: {
+      background: '#dcbcff'
     }
   }
 }
