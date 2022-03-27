@@ -38,7 +38,7 @@ export const BlogPage2022032601 = () => {
           <ContentWrapper>
             <FeatureWrapper>
               <H3>Distributed Java collections</H3>
-              <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/7.-distributed-collections/#71-map">Map</Feature>
+              <Feature target="_blank" href="https://github.com/redisson/redisson/wiki/7.-distributed-collections/#71-map">Map</Feature>
               <Feature target="_blank" href="https://github.com/redisson/redisson/wiki/7.-distributed-collections/#72-multimap">Multimap</Feature>
               <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/7.-distributed-collections/#73-set">Set</Feature>
               <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/7.-distributed-collections/#77-list">List</Feature>
@@ -72,6 +72,7 @@ export const BlogPage2022032601 = () => {
               <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/6.-distributed-objects/#61-object-holder">Object holder</Feature>
               <Feature target="_blank" href="https://github.com/redisson/redisson/wiki/6.-distributed-objects/#64-bitset">BitSet</Feature>
               <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/6.-distributed-objects/#65-atomiclong">AtomicLong</Feature>
+              <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/6.-Distributed-objects">LongAdder</Feature>
               <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/6.-distributed-objects/#67-topic">PublishSubscribe</Feature>
               <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/6.-distributed-objects#614-id-generator">Id generator</Feature>
               <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/6.-distributed-objects#612-ratelimiter">RateLimiter</Feature>
@@ -80,7 +81,7 @@ export const BlogPage2022032601 = () => {
             <FeatureWrapper>
               <H3 style={ {color: 'red'} }>Distributed Java services</H3>
               <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/9.-distributed-services/#91-remote-service">Remote service</Feature>
-              <Feature target="_blank" href="https://github.com/redisson/redisson/wiki/9.-distributed-services/#92-live-object-service">Live Object service</Feature>
+              <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/9.-distributed-services/#92-live-object-service">Live Object service</Feature>
               <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/9.-distributed-services/#93-distributed-executor-service">Executor service</Feature>
               <Feature target="_blank" className="red" href="https://github.com/redisson/redisson/wiki/9.-distributed-services/#94-distributed-scheduled-executor-service">Scheduler service</Feature>
               <Feature target="_blank" href="https://github.com/redisson/redisson/wiki/9.-distributed-services/#95-distributed-mapreduce-service">MapReduce service</Feature>
